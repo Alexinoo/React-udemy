@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Environment</title>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap');
+
+    html {
+      font-size: 100%;
+    } /*16px*/
+
+    :root {
+      /* colors */
+      --primary-50: #b0edfd;
+      --primary-100: #a0e9fd;
+      --primary-200: #90e6fc;
+      --primary-300: #81e2fc;
+      --primary-400: #71dffb;
+
+      --primary-500: #61dbfb;
+
+      --primary-600: #57c5e2;
+      --primary-700: #4eafc9;
+      --primary-800: #4499b0;
+      --primary-900: #3a8397;
+
+      /* grey */
+      --grey-50: #f8fafc;
+      --grey-100: #f1f5f9;
+      --grey-200: #e2e8f0;
+      --grey-300: #cbd5e1;
+      --grey-400: #94a3b8;
+      --grey-500: #64748b;
+      --grey-600: #475569;
+      --grey-700: #334155;
+      --grey-800: #1e293b;
+      --grey-900: #0f172a;
+      /* rest of the colors */
+      --black: #222;
+      --white: #fff;
+      --red-light: #f8d7da;
+      --red-dark: #842029;
+      --green-light: #d1e7dd;
+      --green-dark: #0f5132;
+
+      /* fonts  */
+      --bodyFont: 'Roboto', sans-serif;
+      --smallText: 0.7em;
+
+      /* rest of the vars */
+      --borderRadius: 0.25rem;
+      --letterSpacing: 1px;
+      --transition: 0.3s ease-in-out all;
+      --max-width: 1170px;
+      --fixed-width: 1000px;
+
+      /* box shadow*/
+      --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+        0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    body {
+      background: var(--grey-50);
+      font-family: var(--bodyFont);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--textColor);
+    }
+
+    .container {
+      width: 90vw;
+      max-width: 1170px;
+      margin: 2rem auto;
+      padding: 0.25rem;
+      background-color: var(--grey-900);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    }
+
+    .title h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 4px;
+      text-transform: capitalize;
+      color: #61dbfb;
+    }
+
+    .underline {
+      width: 100%;
+      height: 0.1rem;
+      background-color: var(--white);
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 1.25rem;
+      color: var(--grey-200);
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: var(--primary-500);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 1.5rem;
+      color: var(--primary-500);
+    }
+    a {
+      font-size: 20px;
+      color: #fff;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>create-react-app</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            Unlike Vanilla JS , react requires more tooling but luckily for us
+            we don't have to do that manually
+          </li>
+          <li>
+            <span>Vite</span> allows developers to set up a dev environment for
+            frameworks like <span>Vue, TezJS</span> and <span>React</span> and
+            even for <span>Vanilla JS</span> app with a dev server
+          </li>
+          <li>
+            We are going to use <span>create-react-app</span> in most cases in
+            the React fundamentals and once we get to advanced react concepts
+            then we will switch to <span>Vite</span>
+          </li>
+          <li>
+            Both of them have similar setups and therefore it's going to be a
+            smooth transition
+          </li>
+          <li>
+            <span>create-react-app</span> is a package which we are going to
+            utilize which lets you focus on code, not build tools.
+          </li>
+          <li>
+            Was created and is being maintained by Facebook Team which means
+            that we can be sure that it uses all the latest /correct setup
+          </li>
+          <li>
+            The main goal of this package is to speed up our development process
+            - with the help of this package we can right away start building
+            awesome react apps instead of tinkling and getting frustrated with
+            config setups
+          </li>
+          <li>
+            To create a project called my-app, run this command:
+            <span>npx create-react-app my-app</span>
+          </li>
+          <li>
+            When we install node , we also install npm (node package manager)
+            which allows us to quickly install external packages
+            <ul>
+              <li>
+                <span>npm install packageName</span> OR
+                <span>npm i packageName</span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>npm create-react-app my-app</span> - Older approach which was
+            used to install the create-react-app package globally and then we
+            were able to create a new React-app instance
+          </li>
+          <li>
+            <span>npx create-react-app my-app</span> - Executes this package for
+            us to create a new react-app instance
+          </li>
+          <li>
+            So , instead of installing create-react-app package in our machine ,
+            we will just execute it and as a result will get a brand new react
+            app on our machine
+          </li>
+          <li>
+            If you run <span>npx create-react-app my-app</span> and it spits
+            back error , a quick fix is to <span>add @latest</span> after the
+            package
+            <ul>
+              <li><span>npx create-react-app@latest my-app</span></li>
+            </ul>
+          </li>
+          <li>
+            If the install is successfull, then we don't need to do anything
+          </li>
+          <li>
+            After the installation is done , run <span>npm start</span> to
+            spin/start up the <span>development server</span> on our machine
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
