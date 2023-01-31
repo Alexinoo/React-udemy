@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './styles.css';
 
 const BookList = () => {
   return (
-    <section>
+    <section className="booklist">
       <Book />
       <Book />
       <Book />
@@ -13,7 +14,7 @@ const BookList = () => {
 };
 const Book = () => {
   return (
-    <article>
+    <article className="book">
       <Image />
       <Title />
       <Author />
@@ -36,8 +37,4 @@ const Author = () => {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// console.log(root);
-
 root.render(<BookList />);
-
-/* same as root.render(<BookList></BookList>); */
