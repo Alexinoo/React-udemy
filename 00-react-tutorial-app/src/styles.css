@@ -42,3 +42,12 @@ body {
   font-size: 1rem;
   color: #666;
 }
+
+/* Test Specificity with inline CSS  */
+
+.book h4 {
+  /* won't work */
+  color: red;
+  /* will work */
+  letter-spacing: 2px;
+}
