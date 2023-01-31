@@ -24,15 +24,16 @@ const Book = () => {
 
 const Image = () => (
   <img
-    src="https://m.media-amazon.com/images/I/41UGPOZqH2L._AC_SF480,480_.jpg"
-    alt="Hunt It Down, Kill It & Drag It Home"
+    // src="https://m.media-amazon.com/images/I/41UGPOZqH2L._AC_SF480,480_.jpg"
+    src="./images/Curious_minds.jpg"
+    alt="Interesting Facts about curious minds"
   />
 );
 
-const Title = () => <h2> Hunt It Down, Kill It & Drag It Home</h2>;
+const Title = () => <h2> Interesting Facts about curious minds</h2>;
 
 const Author = () => {
-  return <h4>David Thomas Roberts</h4>;
+  return <h4>Jordan Moore</h4>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
