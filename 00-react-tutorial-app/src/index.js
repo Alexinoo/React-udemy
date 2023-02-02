@@ -7,11 +7,13 @@ const books = [
     author: 'Colleen Hover',
     title: 'IT ENDS WITH US',
     img: 'https://images-na.ssl-images-amazon.com/images/I/81s0B6NYXML._AC_UL600_SR600,400_.jpg',
+    id: 1,
   },
   {
     author: 'Jay Shetty',
     title: '8 RULES OF LOVE',
     img: 'https://images-na.ssl-images-amazon.com/images/I/71FI7MAeUcL._AC_UL600_SR600,400_.jpg',
+    id: 2,
   },
 ];
 
@@ -19,8 +21,8 @@ const BookList = () => {
   return (
     <section className="booklist">
       {books.map((book) => {
-        const { author, title, img } = book;
-        return <Book author={author} title={title} img={img} />;
+        const { author, title, img, id } = book;
+        return <Book author={author} title={title} img={img} key={id} />;
       })}
     </section>
   );
@@ -28,7 +30,7 @@ const BookList = () => {
 
 const Book = (props) => {
   const { author, title, img, children } = props;
-  console.log(props);
+  // console.log(props);
   return (
     <article className="book">
       <img src={img} alt={title} />
