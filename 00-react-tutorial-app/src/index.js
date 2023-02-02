@@ -21,22 +21,19 @@ const BookList = () => {
   return (
     <section className="booklist">
       {books.map((book) => {
-        const { author, title, img, id } = book;
-        return <Book author={author} title={title} img={img} key={id} />;
+        return <Book book={book} key={book.id} />;
       })}
     </section>
   );
 };
 
 const Book = (props) => {
-  const { author, title, img, children } = props;
-  // console.log(props);
+  const { author, title, img } = props.book;
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title} </h2>
       <h4>{author.toUpperCase()}</h4>
-      {children}
     </article>
   );
 };
