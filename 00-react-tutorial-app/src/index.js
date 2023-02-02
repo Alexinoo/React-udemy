@@ -18,29 +18,28 @@ const books = [
 ];
 
 const BookList = () => {
-  const someValue = 'shakeAndBake';
-
-  const displayValue = () => {
-    console.log(someValue);
+  const getBook = (id) => {
+    const book = books.find((book) => book.id === id);
+    console.log(book);
   };
 
   return (
     <section className="booklist">
       {books.map((book) => {
-        return <Book {...book} key={book.id} displayValue={displayValue} />;
+        return <Book {...book} key={book.id} getBook={getBook} />;
       })}
     </section>
   );
 };
 
 const Book = (props) => {
-  const { author, title, img, displayValue } = props;
+  const { author, title, img, getBook, id } = props;
 
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title} </h2>
-      <button onClick={displayValue}>click me</button>
+      <button onClick={getBook(id)}>click me</button>
       <h4>{author.toUpperCase()}</h4>
     </article>
   );
