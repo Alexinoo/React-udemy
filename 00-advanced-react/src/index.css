@@ -338,3 +338,10 @@ ul {
   text-transform: capitalize;
   display: inline-block;
 }
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
