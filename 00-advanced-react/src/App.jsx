@@ -1,4 +1,4 @@
-import Starter from './tutorial/01-useState/starter/06-useState-gotcha-soln';
+import Starter from './tutorial/01-useState/starter/07-useState-setTimeout-example';
 function App() {
   return (
     <div className="container">
