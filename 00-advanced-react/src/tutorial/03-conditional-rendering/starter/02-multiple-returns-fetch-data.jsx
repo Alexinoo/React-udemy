@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-const url = 'https://api.github.com/users/QuincyLarsons';
+const url = 'https://api.github.com/users/QuincyLarson';
 
 const MultipleReturnsFetchData = () => {
   const [user, setUser] = useState(null);
@@ -33,15 +33,21 @@ const MultipleReturnsFetchData = () => {
     return <h2>There was an error... </h2>;
   }
 
+  // Order matters
+  // By the time we get here user should not be null
+
+  const { avatar_url, name, bio, company } = user;
+
   return (
     <div>
       <img
-        src={user.avatar_url}
-        alt={user.name}
+        src={avatar_url}
+        alt={name}
         style={{ width: '150px', borderRadius: '2rem' }}
       />
-      <h2>{user.name}</h2>
-      <h4>works at {user.bio}</h4>
+      <h2>{name}</h2>
+      <h4>works at : {company}</h4>
+      <p>{bio}</p>
     </div>
   );
 };
