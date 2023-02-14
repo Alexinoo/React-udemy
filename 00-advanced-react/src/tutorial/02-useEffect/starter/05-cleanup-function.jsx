@@ -19,6 +19,13 @@ const CleanupFunction = () => {
 const RandomComponent = () => {
   useEffect(() => {
     console.log('hmm, this is interesting');
+    const intervalID = setInterval(() => {
+      console.log('hello from interval');
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalID);
+    };
   }, []);
   return <h3 style={{ marginTop: '2rem' }}>Hello from Some Component</h3>;
 };
