@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  background: #fff;
+  height: 4rem;
+  width: 100%;
+}
+
+.hero {
+  min-height: calc(100vh - 4rem);
+}
