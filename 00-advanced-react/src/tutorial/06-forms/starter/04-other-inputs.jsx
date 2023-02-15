@@ -2,11 +2,18 @@ import { useState } from 'react';
 const frameworks = ['react', 'angular', 'vue', 'svelte'];
 const OtherInputs = () => {
   const [shipping, setShipping] = useState(false);
+  const [framework, setFramework] = useState('react');
 
-  // onChange
+  // onChange -- checkbox
   const handleShipping = (e) => {
     console.log(e.target.checked);
     setShipping(e.target.checked);
+  };
+
+  // onChange -- Select/dropdown
+
+  const handleFramework = (e) => {
+    setFramework(e.target.value);
   };
   return (
     <div>
@@ -27,6 +34,16 @@ const OtherInputs = () => {
           <label htmlFor="framework" className="form-label">
             Framework
           </label>
+          <select
+            name="framework"
+            id="framework"
+            value={framework}
+            onChange={handleFramework}
+          >
+            {frameworks.map((framework, index) => {
+              return <option key={index}>{framework}</option>;
+            })}
+          </select>
         </div>
         <button type="submit" className="btn btn-block">
           submit
